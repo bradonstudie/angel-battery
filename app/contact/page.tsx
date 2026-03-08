@@ -1,9 +1,9 @@
+import { PageHeader } from "../components/PageHeader";
 import "./styles.css";
 import logo from "@/public/studebaker-logo.png";
 
 const SITE_URL = "bradonstudebaker.com";
 const EMAIL = "bradon.studebaker@gmail.com";
-const TEL = "9378440250";
 
 export default function Contact() {
   return (
@@ -14,9 +14,7 @@ export default function Contact() {
           objectFit: "cover",
         }}
       >
-        <h1 className="mb-5 w-full border border-white border-t-0 px-3">
-          Contact
-        </h1>
+        <PageHeader pageName="Contact" />
         <div
           className="business-card p-2 flex flex-col items-start justify-between"
           style={{
@@ -32,7 +30,6 @@ export default function Contact() {
           <div className="flex flex-col justify-between">
             <a href={SITE_URL}>{SITE_URL}</a>
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-            <a href={`tel:${TEL}`}>{TEL}</a>
           </div>
         </div>
       </main>

@@ -2,7 +2,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export const Navigation = () => {
+export function Navigation() {
   const pathname = usePathname();
 
   return (
@@ -30,4 +30,4 @@ export const Navigation = () => {
       </ul>
     </nav>
   );
-};
+}
