@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.business-card {
+  width: 30rem;
+  height: 17rem;
+  max-width: 100%;
+  background-color: var(--color-foreground);
+  background-blend-mode: overlay;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.business-card > * {
+  color: var(--color-background);
+}
+
+.business-card-header {
+  font-size: 3rem;
+  line-height: 1;
+}
