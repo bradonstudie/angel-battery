@@ -14,7 +14,7 @@ export function Navigation() {
         <li className="self-end uppercase">
           <Link
             href="/"
-            className={`link ${pathname === "/" ? "font-bold" : ""}`}
+            className={`link ${pathname === "/" ? "font-bold" : ""} hover:font-bold`}
           >
             Projects
           </Link>
@@ -22,7 +22,7 @@ export function Navigation() {
         <li className="self-end uppercase">
           <Link
             href="/contact"
-            className={`link ${pathname === "/contact" ? "font-bold" : ""}`}
+            className={`link ${pathname === "/contact" ? "font-bold" : ""} hover:font-bold`}
           >
             Contact
           </Link>

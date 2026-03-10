@@ -4,7 +4,7 @@ interface propTypes {
 
 export function PageHeader({ pageName }: propTypes) {
   return (
-    <h1 className="mb-5 w-full border border-white border-t-0 px-3">
+    <h1 className="w-full border border-foreground border-t-0 px-3 normal-case bg-foreground text-background font-bold">
       {pageName}
     </h1>
   );

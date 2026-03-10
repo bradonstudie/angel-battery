@@ -18,6 +18,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --accent: #ffd3d3;
   }
 }
 
@@ -26,9 +27,13 @@ body {
   color: var(--foreground);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-instrument-serif), serif;
-  text-transform: uppercase!important;
 }
 
 a {
@@ -38,4 +43,8 @@ a {
 body,
 li > * {
   font-family: var(--font-instrument-serif), serif;
+}
+
+button {
+  cursor: pointer;
 }

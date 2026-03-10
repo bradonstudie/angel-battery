@@ -1,4 +1,5 @@
 import { PageHeader } from "../components/PageHeader";
+
 import "./styles.css";
 import logo from "@/public/studebaker-logo.png";
 
@@ -16,13 +17,15 @@ export default function Contact() {
       >
         <PageHeader pageName="Contact" />
         <div
-          className="business-card p-2 flex flex-col items-start justify-between"
+          className="business-card p-2 flex flex-col items-start justify-between m-3 mt-5"
           style={{
             backgroundImage: `url(${logo.src})`,
           }}
         >
           <div>
-            <h2 className="business-card-header">Bradon Studebaker</h2>
+            <h2 className="business-card-header uppercase">
+              Bradon Studebaker
+            </h2>
             <a href="https://www.google.com/maps/search/Baltimore,%20MD,%20USA">
               Baltimore, MD
             </a>
