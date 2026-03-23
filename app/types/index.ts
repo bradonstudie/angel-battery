@@ -1,3 +1,3 @@
-import { ProjectConfig } from "./ProjectConfig";
+import { SocialLinkConfig } from "./SocialLinkConfig";
 
-export type { ProjectConfig };
+export type { SocialLinkConfig };

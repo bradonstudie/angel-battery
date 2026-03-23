@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, DM_Mono } from "next/font/google";
 import "./globals.css";
-import { Navigation } from "./components/Navigation";
+import { PageNavigation } from "./components/PageNavigation";
+import { PageFooter } from "./components/PageFooter";
+import { socialLinks } from "@/app/config";
 
 export const metadata: Metadata = {
   title: "Bradon Studebaker",
@@ -32,10 +34,13 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${instrumentSerif.variable} ${dmMono.variable} antialiased dark:bg-black`}
+        className={`${instrumentSerif.variable} ${dmMono.variable} antialiased bg-foreground`}
       >
-        <Navigation />
-        {children}
+        <div className="min-h-svh flex flex-col grow">
+          <PageNavigation />
+          {children}
+          <PageFooter socialLinks={socialLinks} />
+        </div>
       </body>
     </html>
   );
