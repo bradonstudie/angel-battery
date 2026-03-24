@@ -7,8 +7,11 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  transform: rotate(3deg);
+  transition: transform 0.5s ease-out;
 }
 
-.business-card-header {
-  line-height: 1;
+.business-card:hover {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-out;
 }

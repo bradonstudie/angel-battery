@@ -14,14 +14,14 @@ const navigationItems: NavigationItem[] = [
   {
     sortOrder: 0,
     url: "/",
-    text: "Bradon Studebaker",
-    id: "home",
+    text: "Projects",
+    id: "projects",
   },
   {
     sortOrder: 1,
-    url: "/projects",
-    text: "Projects",
-    id: "projects",
+    url: "/gallery",
+    text: "Gallery",
+    id: "gallery",
   },
   {
     sortOrder: 2,

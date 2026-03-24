@@ -34,11 +34,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${instrumentSerif.variable} ${dmMono.variable} antialiased bg-foreground`}
+        className={`${instrumentSerif.variable} ${dmMono.variable} antialiased bg-[var(--page-bg)]`}
       >
         <div className="min-h-svh flex flex-col grow">
           <PageNavigation />
-          {children}
+          <main className="flex w-full flex-col grow px-3">{children}</main>
           <PageFooter socialLinks={socialLinks} />
         </div>
       </body>

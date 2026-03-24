@@ -1,14 +1,14 @@
 import { createPageTheme } from "@/app/lib/createPageTheme";
 
-const { metadata, styleTag } = createPageTheme("green");
+const { metadata, styleTag } = createPageTheme("blue");
 
 export { metadata };
 
-export default function About() {
+export default function Gallery() {
   return (
     <>
       <style>{styleTag}</style>
-      <h1>About</h1>
+      <h1>Gallery</h1>
     </>
   );
 }
