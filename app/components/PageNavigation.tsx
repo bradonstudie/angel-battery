@@ -39,6 +39,8 @@ const navigationItems: NavigationItem[] = [
 
 export function PageNavigation() {
   const pathname = usePathname();
+  const LINK_CLASSES_TAILWIND =
+    "hover:font-bold hover:underline uppercase transition duration-300 ease-in-out";
 
   return (
     <nav>
@@ -47,7 +49,7 @@ export function PageNavigation() {
           <li key={navigationItem.id}>
             <Link href={navigationItem.url}>
               <p
-                className={`link ${pathname === navigationItem.url ? "font-bold underline" : ""} hover:font-bold uppercase`}
+                className={`link ${pathname === navigationItem.url ? "font-bold underline" : ""} ${LINK_CLASSES_TAILWIND}`}
               >
                 {navigationItem.text}
               </p>

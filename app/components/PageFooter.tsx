@@ -5,7 +5,7 @@ interface PropTypes {
 }
 
 export const PageFooter = ({ socialLinks }: PropTypes) => (
-  <footer className="w-screen flex flex-col justify-end px-3 py-2">
+  <footer className="w-screen flex flex-col justify-end px-3 py-2 mt-5">
     <div className="grid grid-cols-2 uppercase">
       <div>
         <p>&copy;2023-2026 </p>

@@ -2,6 +2,7 @@ import "./styles.css";
 import logo from "@/public/studebaker-logo.png";
 
 import { createPageTheme } from "@/app/lib/createPageTheme";
+import { PageHeader } from "../components/UI/PageHeader";
 
 const { metadata, styleTag } = createPageTheme("red");
 
@@ -38,10 +39,8 @@ export default function Contact() {
   return (
     <>
       <style>{styleTag}</style>
-      <div className="mt-5">
-        <h1 className="uppercase text-7xl">Please, take a card</h1>
-      </div>
-      <div className="grid lg:grid-cols-3 mt-5 gap-3">
+      <PageHeader text="Please, take a card" />
+      <div className="grid lg:grid-cols-3 gap-3">
         {businessCardConfigs
           .sort((a, b) => a.id - b.id)
           .map((businessCardConfig) => (

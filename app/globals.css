@@ -25,7 +25,6 @@
 
 body {
   color: var(--foreground);
-  /* background: var(--accent-red); */
 }
 
 h1,
@@ -47,6 +46,7 @@ li > * {
   font-family: var(--font-instrument-serif), serif;
 }
 
-button {
+button,
+a {
   cursor: pointer;
 }
