@@ -1,30 +1,21 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accent-red: #dc4d16;
   --page-bg: #ffffff;
+  --page-text-color: #171717;
+  --document: #fefaa5;
+  --document-2: #d4dcff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-document: var(--document);
+  --color-document-2: var(--document-2);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #191919;
-  }
-}
-
-body {
-  color: var(--foreground);
 }
 
 h1,
@@ -32,21 +23,31 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+body,
+nav > * {
   font-family: var(--font-instrument-serif), serif;
+}
+
+body {
+  color: var(--page-text-color);
 }
 
 a,
-p {
-  font-family: var(--font-dm-mono), Arial, sans-serif;
-}
-
-body,
-li > * {
-  font-family: var(--font-instrument-serif), serif;
+p,
+li {
+  font-family: Arial, sans-serif;
 }
 
 button,
 a {
   cursor: pointer;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+.font-cursive {
+  font-family: var(--font-cursive), cursive;
 }

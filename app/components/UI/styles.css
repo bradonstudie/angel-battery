@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Buttons */
 .button-primary {
   background-color: var(--color-foreground);
   color: var(--color-background);

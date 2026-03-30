@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Route } from "next";
+import loopTile from "@/public/loop-tile.png";
 
 interface NavigationItem {
   url: Route;
@@ -39,17 +40,24 @@ const navigationItems: NavigationItem[] = [
 
 export function PageNavigation() {
   const pathname = usePathname();
-  const LINK_CLASSES_TAILWIND =
-    "hover:font-bold hover:underline uppercase transition duration-300 ease-in-out";
 
   return (
     <nav>
+      <div
+        style={
+          {
+            // backgroundImage: `url(${loopTile.src})`,
+            // backgroundRepeat: "repeat-x",
+            // height: "5rem",
+          }
+        }
+      ></div>
       <ul className="w-full flex flex-row justify-between gap-3 p-3">
         {navigationItems.map((navigationItem) => (
           <li key={navigationItem.id}>
             <Link href={navigationItem.url}>
               <p
-                className={`link ${pathname === navigationItem.url ? "font-bold underline" : ""} ${LINK_CLASSES_TAILWIND}`}
+                className={`link hover:underline uppercase ${pathname === navigationItem.url ? "font-bold underline" : ""} `}
               >
                 {navigationItem.text}
               </p>

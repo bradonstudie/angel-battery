@@ -1,9 +1,10 @@
 export const pageThemes = {
   default: "#ffffff",
-  red: "#dc4d16",
-  blue: "#577db5",
+  black: "#0e0e0e",
+  red: "#de5c29",
+  blue: "#6084ba",
   green: "#689a4c",
-  yellow: "#d3b32d",
+  yellow: "#d4bc5b",
 } as const;
 
 export type PageTheme = keyof typeof pageThemes;

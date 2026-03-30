@@ -6,6 +6,7 @@ export function createPageTheme(theme: PageTheme): {
   styleTag: string;
 } {
   const bg = pageThemes[theme];
+  const textColor = bg === "#0e0e0e" ? "white" : "black";
 
   return {
     metadata: {
@@ -13,6 +14,6 @@ export function createPageTheme(theme: PageTheme): {
         theme,
       },
     },
-    styleTag: `:root { --page-bg: ${bg}; }`,
+    styleTag: `:root { --page-bg: ${bg}; --page-text-color: ${textColor} }`,
   };
 }
