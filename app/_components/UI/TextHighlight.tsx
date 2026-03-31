@@ -5,7 +5,5 @@ interface PropTypes {
 }
 
 export const TextHighlight = ({ children }: PropTypes) => (
-  <span className="bg-[var(--page-text-color)] text-[var(--page-bg)] px-1">
-    {children}
-  </span>
+  <span className="bg-black text-white px-1">{children}</span>
 );

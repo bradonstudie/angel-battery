@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import {
-  Instrument_Serif,
-  DM_Mono,
-  Monsieur_La_Doulaise,
-} from "next/font/google";
+import { Instrument_Serif, Monsieur_La_Doulaise } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
 import { PageNavigation } from "./_components/PageNavigation";
 import { PageFooter } from "./_components/PageFooter";
@@ -20,16 +18,15 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
 });
 
-const dmMono = DM_Mono({
-  variable: "--font-dm-mono",
-  subsets: ["latin"],
-  weight: "300",
-});
-
 const monsieurLaDoulaise = Monsieur_La_Doulaise({
   variable: "--font-cursive",
   subsets: ["latin"],
   weight: "400",
+});
+
+const arialNarrow = localFont({
+  weight: "400",
+  src: "./arial-narrow.ttf",
 });
 
 export default function RootLayout({
@@ -44,7 +41,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${instrumentSerif.variable} ${dmMono.variable} ${monsieurLaDoulaise.variable} bg-[var(--page-bg)] text-[var(--page-text-color)]`}
+        className={`${instrumentSerif.variable} ${monsieurLaDoulaise.variable} ${arialNarrow.className} bg-[var(--page-bg)] text-[var(--page-text-color)]`}
       >
         <div className="min-h-svh flex flex-col grow">
           <PageNavigation />
