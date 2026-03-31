@@ -5,9 +5,9 @@ import {
   Monsieur_La_Doulaise,
 } from "next/font/google";
 import "./globals.css";
-import { PageNavigation } from "./components/PageNavigation";
-import { PageFooter } from "./components/PageFooter";
-import { socialLinks } from "@/app/config";
+import { PageNavigation } from "./_components/PageNavigation";
+import { PageFooter } from "./_components/PageFooter";
+import { socialLinks } from "@/app/_config";
 
 export const metadata: Metadata = {
   title: "Bradon Studebaker",

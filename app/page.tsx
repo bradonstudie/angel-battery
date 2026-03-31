@@ -1,4 +1,4 @@
-import { createPageTheme } from "@/app/lib/createPageTheme";
+import { createPageTheme } from "@/app/_lib/createPageTheme";
 
 const { metadata, styleTag } = createPageTheme("default");
 

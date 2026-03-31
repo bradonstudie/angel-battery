@@ -1,4 +1,4 @@
-import { SocialLinkConfig } from "@/app/types";
+import { SocialLinkConfig } from "@/app/_types";
 
 export const socialLinks: SocialLinkConfig[] = [
   {

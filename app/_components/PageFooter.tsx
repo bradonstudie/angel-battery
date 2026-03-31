@@ -1,4 +1,4 @@
-import { SocialLinkConfig } from "@/app/types";
+import { SocialLinkConfig } from "@/app/_types";
 
 interface PropTypes {
   socialLinks: SocialLinkConfig[];

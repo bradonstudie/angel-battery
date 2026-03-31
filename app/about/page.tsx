@@ -1,13 +1,20 @@
-import { createPageTheme } from "@/app/lib/createPageTheme";
-import { PageHeader } from "../components/UI/PageHeader";
-import { TextHighlight } from "../components/UI/TextHighlight";
+import logo from "@/public/studebaker-logo.png";
+import logoTwo from "@/public/studebaker-logo-2.png";
+
+import { createPageTheme } from "@/app/_lib/createPageTheme";
+import { PageHeader } from "@/app/_components/UI/PageHeader";
+import { TextHighlight } from "@/app/_components/UI/TextHighlight";
 import Link from "next/link";
+import { StickyNote } from "../_components/UI/StickyNote";
 
 const { metadata, styleTag } = createPageTheme("default");
 
 export { metadata };
 
 export default function About() {
+  const srcOne = logo.src;
+  const srcTwo = logoTwo.src;
+
   return (
     <>
       <style>{styleTag}</style>
@@ -56,8 +63,11 @@ export default function About() {
       {/* Document  */}
       <h2 className="mt-12 mb-3 lg:text-5xl text-3xl">About Me</h2>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3">
-        <div className="bg-document aspect-square rotate-2 transition hover:rotate-0 w-fill max-w-2xl p-3">
-          <h3 className="text-2xl uppercase">Listening to:</h3>
+        <StickyNote
+          variant="bg-document"
+          title="Listening to"
+          backgroundImageSrc={srcOne}
+        >
           <ul>
             <li>
               Defeated Sanity - <i>Disposal of the Dead</i>
@@ -81,10 +91,12 @@ export default function About() {
               Insect Warfare - <i>World Extermination</i>
             </li>
           </ul>
-        </div>
-
-        <div className="bg-document-2 aspect-square rotate-2 transition hover:rotate-0 w-fill max-w-2xl p-3">
-          <h3 className="text-2xl uppercase">Browsing:</h3>
+        </StickyNote>
+        <StickyNote
+          variant="bg-document-2"
+          title="Browsing"
+          backgroundImageSrc={srcTwo}
+        >
           <ul>
             <li>
               <a href="https://gifcities.org/" target="_blank">
@@ -109,7 +121,7 @@ export default function About() {
             </li>
             <li>
               <a href="https://uncut.wtf/" target="_blank">
-                UNCUT.wtf Typeface Catalog
+                Uncut Typeface Catalog
               </a>
             </li>
             <li>
@@ -117,11 +129,23 @@ export default function About() {
                 Minimal Gallery
               </a>
             </li>
+            <li>
+              <a href="https://e18e.dev/" target="_blank">
+                e18e
+              </a>
+            </li>
+            <li>
+              <a href="https://www.itsnicethat.com/" target="_blank">
+                It&apos;s Nice That
+              </a>
+            </li>
           </ul>
-        </div>
-
-        <div className="bg-document aspect-square rotate-2 transition hover:rotate-0 w-fill max-w-2xl p-3">
-          <h3 className="text-2xl uppercase">Thinking about:</h3>
+        </StickyNote>
+        <StickyNote
+          variant="bg-document"
+          title="Thinking about"
+          backgroundImageSrc={srcOne}
+        >
           <ul>
             <li>Sticky notes</li>
             <li>System fonts</li>
@@ -130,16 +154,20 @@ export default function About() {
             <li>90s soccer kits</li>
             <li>Sign painting</li>
           </ul>
-        </div>
-
-        <div className="bg-document-2 aspect-square rotate-2 transition hover:rotate-0 w-fill max-w-2xl p-3">
-          <h3 className="text-2xl uppercase">Exploring:</h3>
+        </StickyNote>
+        <StickyNote
+          variant="bg-document-2"
+          title="Exploring"
+          backgroundImageSrc={srcTwo}
+        >
           <ul>
             <li>CSS scroll animations</li>
             <li>Monads</li>
-            <li></li>
+            <li>WebGL</li>
+            <li>WebAssembly</li>
+            <li>Animated type</li>
           </ul>
-        </div>
+        </StickyNote>
       </div>
     </>
   );

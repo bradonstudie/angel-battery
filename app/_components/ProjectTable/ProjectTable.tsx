@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { ProjectConfig } from "@/app/types";
+import { ProjectConfig } from "@/app/_types";
 
 interface MenuItem {
   id: number;

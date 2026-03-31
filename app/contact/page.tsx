@@ -1,9 +1,9 @@
 import logo from "@/public/studebaker-logo.png";
 
-import { createPageTheme } from "@/app/lib/createPageTheme";
-import { PageHeader } from "../components/UI/PageHeader";
-import { TextHighlight } from "../components/UI/TextHighlight";
-import { BusinessCard } from "../components/UI/BusinessCard";
+import { createPageTheme } from "@/app/_lib/createPageTheme";
+import { PageHeader } from "../_components/UI/PageHeader";
+import { TextHighlight } from "../_components/UI/TextHighlight";
+import { BusinessCard } from "../_components/UI/BusinessCard";
 
 const { metadata, styleTag } = createPageTheme("default");
 

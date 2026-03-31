@@ -1,5 +1,5 @@
-import { createPageTheme } from "@/app/lib/createPageTheme";
-import { PageHeader } from "../components/UI/PageHeader";
+import { createPageTheme } from "@/app/_lib/createPageTheme";
+import { PageHeader } from "../_components/UI/PageHeader";
 
 const { metadata, styleTag } = createPageTheme("default");
 
