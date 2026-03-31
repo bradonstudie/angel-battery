@@ -19,7 +19,7 @@ export const PageHeader = ({ text }: PropTypes) => {
    * @param {PropTypes} props
    */
   return (
-    <div className="mt-5 mb-3 flex">
+    <div className="mt-5 flex">
       <h1 className="lg:text-7xl text-4xl">
         <span className="lg:text-8xl text-5xl font-cursive">
           {splitText[0]}

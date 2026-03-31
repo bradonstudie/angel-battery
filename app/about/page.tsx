@@ -1,4 +1,3 @@
-import logo from "@/public/studebaker-logo.png";
 import logoTwo from "@/public/studebaker-logo-2.png";
 
 import { createPageTheme } from "@/app/_lib/createPageTheme";
@@ -7,13 +6,12 @@ import { TextHighlight } from "@/app/_components/UI/TextHighlight";
 import Link from "next/link";
 import { StickyNote } from "../_components/UI/StickyNote";
 
-const { metadata, styleTag } = createPageTheme("default");
+const { metadata, styleTag } = createPageTheme("green");
 
 export { metadata };
 
 export default function About() {
-  const srcOne = logo.src;
-  const srcTwo = logoTwo.src;
+  const { src } = logoTwo;
 
   return (
     <>
@@ -41,7 +39,7 @@ export default function About() {
       <p className="lg:text-3xl text-xl mt-3">
         If you have a <TextHighlight>strong vision,</TextHighlight> I would love
         to help bring it to life.{" "}
-        <Link className="underline text-blue-500" href={"/contact"}>
+        <Link className="underline" href={"/contact"}>
           Let&apos;s get in touch.
         </Link>
       </p>
@@ -63,11 +61,7 @@ export default function About() {
       {/* Document  */}
       <h2 className="mt-12 mb-3 lg:text-5xl text-3xl">About Me</h2>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3">
-        <StickyNote
-          variant="bg-document"
-          title="Listening to"
-          backgroundImageSrc={srcOne}
-        >
+        <StickyNote title="Listening to" backgroundImageSrc={src}>
           <ul>
             <li>
               Defeated Sanity - <i>Disposal of the Dead</i>
@@ -92,11 +86,7 @@ export default function About() {
             </li>
           </ul>
         </StickyNote>
-        <StickyNote
-          variant="bg-document-2"
-          title="Browsing"
-          backgroundImageSrc={srcTwo}
-        >
+        <StickyNote title="Browsing" backgroundImageSrc={src}>
           <ul>
             <li>
               <a href="https://gifcities.org/" target="_blank">
@@ -141,11 +131,7 @@ export default function About() {
             </li>
           </ul>
         </StickyNote>
-        <StickyNote
-          variant="bg-document"
-          title="Thinking about"
-          backgroundImageSrc={srcOne}
-        >
+        <StickyNote title="Thinking about" backgroundImageSrc={src}>
           <ul>
             <li>Sticky notes</li>
             <li>System fonts</li>
@@ -155,11 +141,7 @@ export default function About() {
             <li>Sign painting</li>
           </ul>
         </StickyNote>
-        <StickyNote
-          variant="bg-document-2"
-          title="Exploring"
-          backgroundImageSrc={srcTwo}
-        >
+        <StickyNote title="Exploring" backgroundImageSrc={src}>
           <ul>
             <li>CSS scroll animations</li>
             <li>Monads</li>
