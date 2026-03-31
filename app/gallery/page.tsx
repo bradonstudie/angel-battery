@@ -1,14 +1,15 @@
 import { createPageTheme } from "@/app/_lib/createPageTheme";
+import { PageHeader } from "../_components/UI/PageHeader";
 
 const { metadata, styleTag } = createPageTheme("default");
 
 export { metadata };
 
-export default function Home() {
+export default function Gallery() {
   return (
     <>
       <style>{styleTag}</style>
-      <h1>Home</h1>
+      <PageHeader text="Selected Works 2023-2026" />
     </>
   );
 }

@@ -1,38 +1,42 @@
-import { PageHeader } from "../components/PageHeader";
-import "./styles.css";
 import logo from "@/public/studebaker-logo.png";
 
-const SITE_URL = "bradonstudebaker.com";
+import { createPageTheme } from "@/app/_lib/createPageTheme";
+import { PageHeader } from "../_components/UI/PageHeader";
+import { TextHighlight } from "../_components/UI/TextHighlight";
+import { BusinessCard } from "../_components/UI/BusinessCard";
+
+const { metadata, styleTag } = createPageTheme("default");
+
+export { metadata };
+
 const EMAIL = "bradon.studebaker@gmail.com";
+const SITE_URL = "bradonstudebaker.com";
+const MAP_URL = "https://www.google.com/maps/search/Baltimore,%20MD,%20USA";
+const BUSINESS_CARD_COUNT = 3;
 
 export default function Contact() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <main
-        className="flex min-h-screen w-full flex-col items-center"
-        style={{
-          objectFit: "cover",
-        }}
-      >
-        <PageHeader pageName="Contact" />
-        <div
-          className="business-card p-2 flex flex-col items-start justify-between"
-          style={{
-            backgroundImage: `url(${logo.src})`,
-          }}
-        >
-          <div>
-            <h2 className="business-card-header">Bradon Studebaker</h2>
-            <a href="https://www.google.com/maps/search/Baltimore,%20MD,%20USA">
-              Baltimore, MD
-            </a>
-          </div>
-          <div className="flex flex-col justify-between">
-            <a href={SITE_URL}>{SITE_URL}</a>
-            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-          </div>
-        </div>
-      </main>
-    </div>
+    <>
+      <style>{styleTag}</style>
+      <PageHeader text="Please, Take a Card" />
+      <p className="lg:text-3xl text-xl mb-8">
+        Do you have an <TextHighlight>idea?</TextHighlight>{" "}
+        <a className="underline text-blue-500" href={`mailto:${EMAIL}`}>
+          Shoot me an email.
+        </a>
+      </p>
+      {/* Business Cards */}
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 justify-center auto-rows-max">
+        {[...Array(BUSINESS_CARD_COUNT)].map((e, i) => (
+          <BusinessCard
+            key={i}
+            backgroundImageSrc={logo.src}
+            emailAddress={EMAIL}
+            siteUrl={SITE_URL}
+            mapUrl={MAP_URL}
+          />
+        ))}
+      </div>
+    </>
   );
 }
