@@ -1,42 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
   --page-bg: #ffffff;
-  --page-text-color: #171717;
-  --document: #fefaa5;
-  --document-2: #d4dcff;
+  --page-text-color: #262626;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-document: var(--document);
-  --color-document-2: var(--document-2);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-body,
-nav > * {
-  font-family: var(--font-instrument-serif), serif;
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-marquee2: marquee2 25s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
 }
 
 body {
   color: var(--page-text-color);
-}
-
-a,
-p,
-li {
-  font-family: "Arial Narrow", Arial, sans-serif;
+  font-family: var(--font-xanh-mono), monospace;
 }
 
 button,
@@ -46,8 +42,14 @@ a {
 
 a:hover {
   font-weight: bold;
+  text-decoration: underline;
 }
 
-.font-cursive {
-  font-family: var(--font-cursive), cursive;
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

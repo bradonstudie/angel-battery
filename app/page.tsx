@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <style>{styleTag}</style>
-      <h1>Home</h1>
+      <h1 className="sr-only">Home</h1>
     </>
   );
 }

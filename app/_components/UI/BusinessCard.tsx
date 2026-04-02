@@ -13,7 +13,7 @@ export const BusinessCard = ({
 }: PropTypes) => {
   return (
     <div
-      className="bg-center bg-cover bg-no-repeat rotate-2 transition hover:rotate-0 aspect-3.5/2 py-2 px-3 flex flex-col items-start justify-between w-full bg-white"
+      className="border border-dashed bg-[var(--page-bg)] bg-center bg-cover bg-no-repeat rotate-2 transition hover:rotate-0 aspect-3.5/2 py-2 px-3 flex flex-col items-start justify-between w-full"
       style={{
         backgroundImage: `url(${backgroundImageSrc})`,
       }}
