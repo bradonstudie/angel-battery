@@ -5,8 +5,7 @@ import { PageHeader } from "../_components/UI/PageHeader";
 import { TextHighlight } from "../_components/UI/TextHighlight";
 import { BusinessCard } from "../_components/UI/BusinessCard";
 
-const { metadata, styleTag } = createPageTheme("red");
-
+const { metadata, styleTag } = createPageTheme("default");
 export { metadata };
 
 const EMAIL = "bradon.studebaker@gmail.com";
@@ -18,8 +17,8 @@ export default function Contact() {
   return (
     <>
       <style>{styleTag}</style>
-      <PageHeader text="Please, Take a Card" />
-      <p className="lg:text-3xl text-xl mb-3">
+      <PageHeader text="Take a Card" />
+      <p className="lg:text-3xl text-xl mb-5">
         Do you have an <TextHighlight>idea?</TextHighlight>{" "}
         <a className="underline" href={`mailto:${EMAIL}`}>
           Shoot me an email.

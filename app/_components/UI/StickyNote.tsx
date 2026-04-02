@@ -10,7 +10,7 @@ export const StickyNote = ({
   title,
 }: PropTypes) => (
   <div
-    className={`uppercase bg-white bg-center bg-cover bg-no-repeat aspect-square rotate-2 transition hover:rotate-0 w-fill max-w-2xl p-3`}
+    className={`uppercase border border-dashed bg-[var(--page-bg)] bg-center bg-cover bg-no-repeat aspect-square rotate-2 transition hover:rotate-0 w-fill max-w-2xl p-3 w-9/10 items-center`}
     style={{
       backgroundImage: `url(${backgroundImageSrc})`,
     }}

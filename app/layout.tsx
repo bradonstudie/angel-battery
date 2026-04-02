@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Monsieur_La_Doulaise } from "next/font/google";
-import localFont from "next/font/local";
+import { Xanh_Mono } from "next/font/google";
 
 import "./globals.css";
 import { PageNavigation } from "./_components/PageNavigation";
@@ -9,24 +8,13 @@ import { socialLinks } from "@/app/_config";
 
 export const metadata: Metadata = {
   title: "Bradon Studebaker",
-  description: "Web and music based design by Bradon Studebaker",
+  description: "Web and media based design by Bradon Studebaker",
 };
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
+const xanhMono = Xanh_Mono({
+  variable: "--font-xanh-mono",
   subsets: ["latin"],
   weight: "400",
-});
-
-const monsieurLaDoulaise = Monsieur_La_Doulaise({
-  variable: "--font-cursive",
-  subsets: ["latin"],
-  weight: "400",
-});
-
-const arialNarrow = localFont({
-  weight: "400",
-  src: "./arial-narrow.ttf",
 });
 
 export default function RootLayout({
@@ -41,7 +29,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${instrumentSerif.variable} ${monsieurLaDoulaise.variable} ${arialNarrow.className} bg-[var(--page-bg)] text-[var(--page-text-color)]`}
+        className={`${xanhMono.variable} bg-[var(--page-bg)] text-[var(--page-text-color)]`}
       >
         <div className="min-h-svh flex flex-col grow">
           <PageNavigation />

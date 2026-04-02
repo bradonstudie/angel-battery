@@ -1,4 +1,5 @@
-import logoTwo from "@/public/studebaker-logo-2.png";
+"use static";
+import logo from "@/public/studebaker-logo.png";
 
 import { createPageTheme } from "@/app/_lib/createPageTheme";
 import { PageHeader } from "@/app/_components/UI/PageHeader";
@@ -6,17 +7,16 @@ import { TextHighlight } from "@/app/_components/UI/TextHighlight";
 import Link from "next/link";
 import { StickyNote } from "../_components/UI/StickyNote";
 
-const { metadata, styleTag } = createPageTheme("green");
-
+const { metadata, styleTag } = createPageTheme("default");
 export { metadata };
 
 export default function About() {
-  const { src } = logoTwo;
+  const { src } = logo;
 
   return (
     <>
       <style>{styleTag}</style>
-      <PageHeader text="Welcome to My Studio" />
+      <PageHeader text="Welcome" />
       {/* About Info */}
       <p className="lg:text-3xl text-xl">
         My name is <TextHighlight>Bradon,</TextHighlight> a Baltimore based
@@ -37,15 +37,15 @@ export default function About() {
         <TextHighlight>implementation.</TextHighlight>
       </p>
       <p className="lg:text-3xl text-xl mt-3">
-        If you have a <TextHighlight>strong vision,</TextHighlight> I would love
-        to help bring it to life.{" "}
+        Have a <TextHighlight>strong vision?</TextHighlight> I would love to
+        help bring it to life.{" "}
         <Link className="underline" href={"/contact"}>
           Let&apos;s get in touch.
         </Link>
       </p>
       <div className="flex">
         <div className="w-2xl border border-dashed mt-3 py-3">
-          <ol className="pl-7 list-decimal">
+          <ol className="pl-8 list-decimal">
             <li id="development">
               Web development, search engine optimization, content management
               systems, commerce
@@ -59,8 +59,8 @@ export default function About() {
       </div>
 
       {/* Document  */}
-      <h2 className="mt-12 mb-3 lg:text-5xl text-3xl">About Me</h2>
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3">
+      <h2 className="mt-12 mb-5 lg:text-5xl text-3xl">About Me</h2>
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3 items-stretch">
         <StickyNote title="Listening to" backgroundImageSrc={src}>
           <ul>
             <li>
