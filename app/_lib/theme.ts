@@ -1,8 +1,8 @@
 export const pageThemes = {
-  default: "#f9f9f9",
-  black: "#252525",
+  default: "#ffffff",
+  black: "#484848",
   red: "#de5c29",
-  blue: "#4680d6",
+  blue: "#b1c9ee",
   green: "#689a4c",
   yellow: "#ffffc7",
 } as const;

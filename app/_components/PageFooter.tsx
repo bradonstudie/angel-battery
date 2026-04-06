@@ -1,5 +1,5 @@
 import { SocialLinkConfig } from "@/app/_types";
-import { CustomMarquee } from "./UI/CustomMarquee";
+// import { CustomMarquee } from "./UI/CustomMarquee";
 interface PropTypes {
   socialLinks: SocialLinkConfig[];
 }
@@ -20,6 +20,6 @@ export const PageFooter = ({ socialLinks }: PropTypes) => (
         ))}
       </div>
     </div>
-    <CustomMarquee />
+    {/* <CustomMarquee /> */}
   </footer>
 );

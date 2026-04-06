@@ -4,6 +4,6 @@ export const marqueeItems: string[] = [
   "Physical Media",
   "User Experience",
   "E-Commerce",
-  "Brand Identity",
-  "Web Campaigns",
+  "Brand Identity & Systems",
+  "Marketing Campaigns",
 ];

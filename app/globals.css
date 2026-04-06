@@ -2,15 +2,15 @@
 
 :root {
   --page-bg: #ffffff;
-  --page-text-color: #262626;
+  --page-text-color: #1d1d1d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --animate-marquee: marquee 25s linear infinite;
-  --animate-marquee2: marquee2 25s linear infinite;
+  --animate-marquee: marquee 60s linear infinite;
+  --animate-marquee2: marquee2 60s linear infinite;
 
   @keyframes marquee {
     0% {

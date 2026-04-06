@@ -1,11 +1,14 @@
 "use static";
+import Link from "next/link";
+import Image from "next/image";
+
 import logo from "@/public/studebaker-logo.png";
+import bradon from "@/public/bradon.jpg";
 
 import { createPageTheme } from "@/app/_lib/createPageTheme";
 import { PageHeader } from "@/app/_components/UI/PageHeader";
 import { TextHighlight } from "@/app/_components/UI/TextHighlight";
-import Link from "next/link";
-import { StickyNote } from "../_components/UI/StickyNote";
+import { StickyNote } from "@/app/_components/UI/StickyNote";
 
 const { metadata, styleTag } = createPageTheme("default");
 export { metadata };
@@ -17,47 +20,59 @@ export default function About() {
     <>
       <style>{styleTag}</style>
       <PageHeader text="Welcome" />
-      {/* About Info */}
-      <p className="lg:text-3xl text-xl">
-        My name is <TextHighlight>Bradon,</TextHighlight> a Baltimore based
-        designer and engineer blending development
-        <sup>
-          <a href="#development">1</a>
-        </sup>
-        , design
-        <sup>
-          <a href="#design">2</a>
-        </sup>{" "}
-        and branding
-        <sup>
-          <a href="#branding">3</a>
-        </sup>{" "}
-        thoughtfully across the physical and web from{" "}
-        <TextHighlight>ideation</TextHighlight> to{" "}
-        <TextHighlight>implementation.</TextHighlight>
-      </p>
-      <p className="lg:text-3xl text-xl mt-3">
-        Have a <TextHighlight>strong vision?</TextHighlight> I would love to
-        help bring it to life.{" "}
-        <Link className="underline" href={"/contact"}>
-          Let&apos;s get in touch.
-        </Link>
-      </p>
-      <div className="flex">
-        <div className="w-2xl border border-dashed mt-3 py-3">
-          <ol className="pl-8 list-decimal">
-            <li id="development">
-              Web development, search engine optimization, content management
-              systems, commerce
-            </li>
-            <li id="design">
-              Web design, illustration, type, print matter, user experience
-            </li>
-            <li id="branding">Logo design, brand identity, brand systems</li>
-          </ol>
+      {/* Info */}
+      <div className="grid grid-cols-4 gap-3">
+        <div className="col-span-4 md:col-span-1">
+          <Image
+            src={bradon}
+            alt="A photo of me"
+            className="p-3 w-100 border border-dashed border-red-500"
+          />
+        </div>
+        <div className="flex flex-col col-span-4 md:col-span-3">
+          <p className="lg:text-3xl text-xl">
+            My name is <TextHighlight>Bradon,</TextHighlight> a Baltimore based
+            designer and engineer blending development
+            <sup>
+              <a href="#development">1</a>
+            </sup>
+            , design
+            <sup>
+              <a href="#design">2</a>
+            </sup>{" "}
+            and branding
+            <sup>
+              <a href="#branding">3</a>
+            </sup>{" "}
+            thoughtfully across the physical and web from{" "}
+            <TextHighlight>ideation</TextHighlight> to{" "}
+            <TextHighlight>implementation.</TextHighlight>
+          </p>
+          <p className="lg:text-3xl text-xl mt-3">
+            Do you have a <TextHighlight>strong vision?</TextHighlight> I would
+            love to help bring it to life.{" "}
+            <Link className="underline" href={"/contact"}>
+              Let&apos;s get in touch.
+            </Link>
+          </p>
+          <div className="flex">
+            <div className="border border-dashed border-red-500 mt-3 p-3">
+              <ol className="pl-8 list-decimal">
+                <li id="development">
+                  Web development, search engine optimization, content
+                  management systems, commerce
+                </li>
+                <li id="design">
+                  Web design, illustration, type, print matter, user experience
+                </li>
+                <li id="branding">
+                  Logo design, brand identity, brand systems
+                </li>
+              </ol>
+            </div>
+          </div>
         </div>
       </div>
-
       {/* Document  */}
       <h2 className="mt-12 mb-5 lg:text-5xl text-3xl">About Me</h2>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3 items-stretch">
